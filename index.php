@@ -7,7 +7,7 @@
 
 <article class="post">
 <header class="postheader">
-<h1><a href="#">Student Information System</a></h1><h3>&nbsp;</h3>
+<h1><a href="#">Indian Student Information System</a></h1><h3>&nbsp;</h3>
 <h3><i>St. Philomena College, Philonagar, Darbe, Puttur.</i></h3>
 <a href="#"></a></p>
 </header>
