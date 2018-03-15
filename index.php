@@ -11,7 +11,7 @@
 <h3><i>St. Philomena College, Philonagar, Darbe, Puttur.</i></h3>
 <a href="#"></a></p>
 </header>
-<p><b>Student Information Systems are the primary systems for operating  colleges. The Student Information System is a student-level data collection  system that allows the Department to collect and analyze more accurate and  comprehensive information. Student information systems provide capabilities for  entering student records, tracking student attendance, and managing many other  student-related data needs in a college or university.</b></p>
+<p><b>America Student Information Systems are the primary systems for operating  colleges. The Student Information System is a student-level data collection  system that allows the Department to collect and analyze more accurate and  comprehensive information. Student information systems provide capabilities for  entering student records, tracking student attendance, and managing many other  student-related data needs in a college or university.</b></p>
 </article>
 <article class="post">
 <header class="postheader">
