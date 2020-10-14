@@ -1,0 +1,8 @@
+# playbook.yml
+---
+- hosts: myHosts
+  tasks:
+  - get_url:
+      url: "http://central.maven.org/maven2/com/walmartlabs/concord/concord-cli/1.67.0/concord-cli-1.67.0-executable.jar"
+      dest: "{{ artifactDest }}"
+
