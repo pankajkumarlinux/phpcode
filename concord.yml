@@ -1,6 +1,6 @@
 forms:
   myForm:
-  - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: true, placeholder: "Place name here" }
+  - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: false, placeholder: "Place name here" }
   - age: { label: "Age", type: "int", min: 21, max: 100 }
   - favouriteColour: { label: "Favourite colour", type: "string", allow: ["gray", "grey"], search: true }
   - password: { label: "Password", type: "string", inputType: "password" }
