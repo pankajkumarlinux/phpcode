@@ -1,16 +1,17 @@
-forms:
-  myForm:
-  - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: false, placeholder: "Place name here" }
-  - age: { label: "Age", type: "int", min: 21, max: 100 }
-  - favouriteColour: { label: "Favourite colour", type: "string", allow: ["gray", "grey"], search: true }
-  - password: { label: "Password", type: "string", inputType: "password" }
-  - rememberMe: { label: "Remember me", type: "boolean" }
-  - photo: { label: "Photo", type: "file" }
-  - email: { label: "Email", type: "string", inputType: "email" }
+configuration:
+  dependencies:
+    - "mvn://com.walmartlabs.concord.plugins.basic:ansible-tasks:1.67.0"
 
 flows:
   default:
-  - form: myForm
-    saveSubmittedBy: true
-    
-  - log: "Hello, ${myForm.fullName}"
+  - task: ansible
+    in:
+      playbook: playbook.yml
+      inventory:
+        myHosts:
+          hosts:
+            - "127.0.0.1"
+          vars:
+            ansible_connection: "local" # just for example purposes, don't actually connect
+      extraVars:
+        artifactDest: "${workDir}"
