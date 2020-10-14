@@ -13,4 +13,4 @@ flows:
   - form: myForm
     saveSubmittedBy: true
     
-  - log: "Hello, ${myForm.submittedBy.fullName}"
+  - log: "Hello, ${myForm.fullName}"

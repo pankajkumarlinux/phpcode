@@ -1,9 +1,0 @@
-flows:
-  default:
-  - log: "hello!"
-
-configuration:
-  template: "mytemplate"
-  arguments:
-    nested:
-      value: "234"
