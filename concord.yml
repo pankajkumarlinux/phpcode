@@ -1,6 +1,6 @@
 configuration:
   dependencies:
-    - mvn://com.walmartlabs.concord.plugins:terraform-task:0.2.13
+    - mvn://com.walmartlabs.concord.plugins:terraform-task:1.32.3
 
 flows:
   default:
