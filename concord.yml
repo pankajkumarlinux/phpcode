@@ -1,8 +1,8 @@
 forms:
   myForm:
   - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: false, placeholder: "Place name here" }
-  - age: { label: "Age", type: "int", min: 21, max: 100 }
-  - favouriteColour: { label: "Favourite colour", type: "string", allow: ["gray", "grey"], search: true }
+  - age: { label: "Age", type: "int", min: 8, max: 100 }
+  - favouriteColour: { label: "Favourite colour", type: "string", allow: ["gray", "blue", "red"], search: true }
   - password: { label: "Password", type: "string", inputType: "password" }
   - rememberMe: { label: "Remember me", type: "boolean" }
   - photo: { label: "Photo", type: "file" }
@@ -13,4 +13,4 @@ flows:
   - form: myForm
     saveSubmittedBy: true
     
-  - log: "Hello, ${myForm.fullName}"
+  - log: "Hello, ${myForm.fullName}, ${myForm.email}"
