@@ -171,7 +171,7 @@ data "azurerm_resource_group" "image" {
 }
 
 data "azurerm_image" "image" {
-  name                = "myPackerImage"
+  name                = "dev-azure-ui-1611723142"
   resource_group_name = data.azurerm_resource_group.image.name
 }
 
@@ -216,7 +216,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
     ssh_keys {
       path     = "/home/tfadmin/.ssh/authorized_keys"
-      key_data = file("~/.ssh/id_rsa.pub")
+      key_data = file("~/id_rsa.pub")
     }
   }
 
