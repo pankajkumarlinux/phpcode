@@ -1,0 +1,18 @@
+flows:
+  default:
+  - task: git
+    in:
+      action: "clone"
+      url: "git@git.example.com:example-org/git-project.git"
+      workingDir: "git-project"
+      privateKey:
+        org: "myGitHubOrg"
+        secretName: "mySecret"
+        password: "mySecretPassword" # optional
+      baseBranch: "feature-a"
+      out: "response"
+      ignoreErrors: true
+
+  - if: "${!response.ok}"
+    then:
+    - log: "Clone action failed: ${response.error}"
