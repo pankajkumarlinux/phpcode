@@ -26,10 +26,10 @@ flows:
 
     - script: python
       body: |
-        import os;
+        import os
         path = '/home/concord'
         entries = os.listdir(path)
-        for f in entries;
+        for f in entries
           print(f)
 
     - task: terraform
