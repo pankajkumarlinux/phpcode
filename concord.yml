@@ -1,16 +1,20 @@
-forms:
-  myForm:
-  - fullName: { label: "Name", type: "string", pattern: ".* .*", readonly: false, placeholder: "Place name here" }
-  - age: { label: "Age", type: "int", min: 8, max: 100 }
-  - favouriteColour: { label: "Favourite colour", type: "string", allow: ["gray", "blue", "red"], search: true }
-  - password: { label: "Password", type: "string", inputType: "password" }
-  - rememberMe: { label: "Remember me", type: "boolean" }
-  - photo: { label: "Photo", type: "file" }
-  - email: { label: "Email", type: "string", inputType: "email" }
+configuration:
+  dependencies:
+    - mvn://com.walmartlabs.concord.plugins:terraform-task:1.12.0
 
 flows:
   default:
-  - form: myForm
-    saveSubmittedBy: true
-    
-  - log: "Hello, ${myForm.submittedBy.displayName}"
+    - task: terraform
+      in:
+        action: plan
+        extraVars:
+          subscription_id: "azure subsciption id" # replace with the real values
+          tenant_id: "azure tenant id" # or use Concord Secrets, `decryptString` etc
+          client_id: "azure client id"
+          client_secret: "azure client secret"
+
+    - task: terraform
+      in:
+        action: apply
+        plan: "${result.planPath}"
+        # when using a previously created plan file, no need to pass `extraVars` again      
