@@ -1,22 +1,3 @@
-variable "client_id" {
-    description =   "Client ID (APP ID) of the application"
-    type        =   string
-}
-
-variable "client_secret" {
-    description =   "Client Secret (Password) of the application"
-    type        =   string
-}
-
-variable "subscription_id" {
-    description =   "Subscription ID"
-    type        =   string
-}
-
-variable "tenant_id" {
-    description =   "Tenant ID"
-    type        =   string
-}
 #Define application name
 variable "app_name" {
   type = string
@@ -89,4 +70,22 @@ variable "ubuntu-linux-18-sku" {
 variable "application_port" {
     description = "The port that you want to expose to the external load balancer"
     default     = 80
+}
+variable "client_id"{
+    type = string
+    description = "client_id"
+}
+variable "client_secret"{
+    type = string
+    description = "client_id"
+}
+
+variable "subscription_id"{
+    type = string
+    description = "client_id"
+}
+
+variable "tenant_id"{
+    type = string
+    description = "client_id"
 }
