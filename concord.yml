@@ -24,13 +24,13 @@ flows:
       then:
       - log: "Clone action failed: ${response.error}"
 
-    # - script: python
-    #   body: |
-    #     import os
-    #     path = '\tmp\prefork*?\payload/git-project'
-    #     entries = os.listdir(path)
-    #     for f in entries:
-    #       print(f)
+    - script: python
+      body: |
+        import os
+        path = '/home/concord/git-project'
+        entries = os.listdir(path)
+        for f in entries:
+          print(f)
 
     - task: terraform
       in:
