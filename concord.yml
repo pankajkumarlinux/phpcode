@@ -1,17 +1,3 @@
-configuration:
-  dependencies:
-    - "mvn://com.walmartlabs.concord.plugins.basic:ansible-tasks:1.67.0"
-
 flows:
   default:
-  - task: ansible
-    in:
-      playbook: playbook.yml
-      inventory:
-        myHosts:
-          hosts:
-            - "127.0.0.1"
-          vars:
-            ansible_connection: "local" # just for example purposes, don't actually connect
-      extraVars:
-        artifactDest: "${workDir}"
+  - log: "Hello Concord User"
