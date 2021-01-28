@@ -11,7 +11,7 @@ flows:
       in:
         action: "clone"
         url: "git@github.com:pankajkumarlinux/phpcode.git"
-        workingDir: "\home\concord\git-project"
+        workingDir: "/home/concord/git-project"
         privateKey:
           org: "Default"
           secretName: "mygitkey"
