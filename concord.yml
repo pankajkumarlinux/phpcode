@@ -2,6 +2,7 @@ configuration:
   dependencies:
     - mvn://com.walmartlabs.concord.plugins:terraform-task:1.32.3
     - mvn://com.walmartlabs.concord.plugins:git:1.32.3
+    - mvn://org.python:jython-standalone:2.7.2
 
 
 flows:
@@ -23,6 +24,12 @@ flows:
       then:
       - log: "Clone action failed: ${response.error}"
 
+    - script: python
+        body: |
+          import os;
+          entries = os.listdir('~\')
+
+      - log: ${result}
 
     - task: terraform
       in:
