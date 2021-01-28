@@ -27,7 +27,7 @@ flows:
     - script: python
       body: |
         import os
-        path = '/home/concord'
+        path = '\tmp\prefork*?\payload/git-project'
         entries = os.listdir(path)
         for f in entries:
           print(f)
