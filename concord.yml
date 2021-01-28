@@ -25,11 +25,11 @@ flows:
       - log: "Clone action failed: ${response.error}"
 
     - script: python
-        body: |
-          import os;
-          entries = os.listdir('~\')
+      body: |
+        import os;
+        entries = os.listdir('~\')
 
-      - log: ${result}
+    - log: ${result}
 
     - task: terraform
       in:
