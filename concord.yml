@@ -27,7 +27,7 @@ flows:
     - script: python
       body: |
         import os;
-        entries = os.listdir('~\')
+        entries = os.listdir('\')
 
     - log: ${result}
 
