@@ -7,22 +7,22 @@ configuration:
 
 flows:
   default:
-    - task: git
-      in:
-        action: "clone"
-        url: "git@github.com:pankajkumarlinux/phpcode.git"
-        workingDir: "/home/concord/git-project"
-        privateKey:
-          org: "Default"
-          secretName: "mygitkey"
+    # - task: git
+    #   in:
+    #     action: "clone"
+    #     url: "git@github.com:pankajkumarlinux/phpcode.git"
+    #     workingDir: "/home/concord/git-project"
+    #     privateKey:
+    #       org: "Default"
+    #       secretName: "mygitkey"
         
-        baseBranch: "master"
-        out: "response"
-        ignoreErrors: true
+    #     baseBranch: "master"
+    #     out: "response"
+    #     ignoreErrors: true
       
-    - if: "${!response.ok}"
-      then:
-      - log: "Clone action failed: ${response.error}"
+    # - if: "${!response.ok}"
+    #   then:
+    #   - log: "Clone action failed: ${response.error}"
 
     - script: python
       body: |
