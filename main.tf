@@ -216,7 +216,7 @@ resource "azurerm_virtual_machine_scale_set" "vmss" {
 
     ssh_keys {
       path     = "/home/tfadmin/.ssh/authorized_keys"
-      key_data = file("~/id_rsa.pub")
+      key_data = file("~/phpcode/id_rsa.pub")
     }
   }
 
