@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+    api:
+     build:
+       context: ../
+       dockerfile: ./spring-petclinic-rest/docker/Dockerfile
